@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-// Define the styles for the loader animation and all fancy effects
 const componentStyles = `
     /* HIDE DEFAULT CURSOR & APPLY CUSTOM CURSOR TO BODY */
     body, button, textarea {
@@ -50,7 +48,6 @@ const componentStyles = `
         100% { transform: rotate(360deg); }
     }
 
-    /* CUSTOM CURSOR STYLES */
     .cursor-dot {
         position: fixed;
         top: 0;
@@ -84,7 +81,6 @@ const componentStyles = `
     }
 `;
 
-// Helper component for the new SVG Icon
 const TechIcon = () => (
     <svg className="w-12 h-12 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -93,7 +89,6 @@ const TechIcon = () => (
     </svg>
 );
 
-// Custom Cursor Component
 const CustomCursor = ({ isHovering }) => {
     const [position, setPosition] = useState({ x: -100, y: -100 });
 
@@ -116,7 +111,6 @@ const CustomCursor = ({ isHovering }) => {
 };
 
 
-// Main Application Component
 export default function App() {
     const [text, setText] = useState('');
     const [result, setResult] = useState(null);
